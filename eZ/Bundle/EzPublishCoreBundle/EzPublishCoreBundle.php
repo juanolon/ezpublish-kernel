@@ -10,6 +10,7 @@
 namespace eZ\Bundle\EzPublishCoreBundle;
 
 use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Compiler\AddFieldTypePass;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Compiler\ConfigResolverParameterPass;
 use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Compiler\FragmentPass;
 use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Compiler\IdentityDefinerPass;
 use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Compiler\RegisterStorageEnginePass;
@@ -52,6 +53,7 @@ class EzPublishCoreBundle extends Bundle
         $container->addCompilerPass( new SecurityPass );
         $container->addCompilerPass( new RichTextHtml5ConverterPass );
         $container->addCompilerPass( new FragmentPass );
+        $container->addCompilerPass( new ConfigResolverParameterPass );
 
         $securityExtension = $container->getExtension( 'security' );
         $securityExtension->addSecurityListenerFactory( new HttpBasicFactory );
