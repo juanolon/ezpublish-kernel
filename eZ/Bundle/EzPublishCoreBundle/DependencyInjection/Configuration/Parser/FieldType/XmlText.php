@@ -14,7 +14,7 @@ use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
- * Configuration parser handling content related config
+ * Configuration parser handling XmlText field type related config
  */
 class XmlText extends AbstractFieldTypeParser
 {
@@ -27,7 +27,7 @@ class XmlText extends AbstractFieldTypeParser
      */
     public function addSemanticConfig( NodeBuilder $nodeBuilder )
     {
-        $nodeBuilder->setParent()
+        $nodeBuilder
             ->arrayNode( 'ezxml' )
                 ->children()
                     ->arrayNode( 'custom_tags' )

@@ -36,9 +36,9 @@ class XmlTextTest extends AbstractExtensionTestCase
     }
 
     /**
-     * @dataProvider contentSettingsProvider
+     * @dataProvider xmlTextSettingsProvider
      */
-    public function testContentSettings( array $config, array $expected )
+    public function testXmlTextSettings( array $config, array $expected )
     {
         $this->load(
             array(
@@ -54,7 +54,7 @@ class XmlTextTest extends AbstractExtensionTestCase
         }
     }
 
-    public function contentSettingsProvider()
+    public function xmlTextSettingsProvider()
     {
         return array(
             array(
