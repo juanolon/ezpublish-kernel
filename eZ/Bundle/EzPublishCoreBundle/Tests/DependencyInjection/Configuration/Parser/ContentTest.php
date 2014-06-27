@@ -163,6 +163,62 @@ class ContentTest extends AbstractExtensionTestCase
                     ),
                 )
             ),
+            array(
+                array(
+                    'content' => array(),
+                    'fieldtypes' => array(
+                        'ezrichtext' => array(
+                            'tags' => array(
+                                'default' => array(
+                                    'template' => 'MyBundle:FieldType/RichText/tag:default.html.twig',
+                                ),
+                                'math_equation' => array(
+                                    'template' => 'MyBundle:FieldType/RichText/tag:math_equation.html.twig',
+                                ),
+                            )
+                        )
+                    )
+                ),
+                array(
+                    'ezsettings.ezdemo_site.content.view_cache' => true,
+                    'ezsettings.ezdemo_site.content.ttl_cache' => true,
+                    'ezsettings.ezdemo_site.content.default_ttl' => 60,
+                    'ezsettings.ezdemo_site.fieldtypes.ezrichtext.tags.default' => array(
+                        'template' => 'MyBundle:FieldType/RichText/tag:default.html.twig',
+                    ),
+                    'ezsettings.ezdemo_site.fieldtypes.ezrichtext.tags.math_equation' => array(
+                        'template' => 'MyBundle:FieldType/RichText/tag:math_equation.html.twig',
+                    ),
+                )
+            ),
+            array(
+                array(
+                    'content' => array(),
+                    'fieldtypes' => array(
+                        'ezrichtext' => array(
+                            'embed' => array(
+                                'content' => array(
+                                    'template' => 'MyBundle:FieldType/RichText/embed:content.html.twig',
+                                ),
+                                'location_inline_denied' => array(
+                                    'template' => 'MyBundle:FieldType/RichText/embed:location_inline_denied.html.twig',
+                                ),
+                            )
+                        )
+                    )
+                ),
+                array(
+                    'ezsettings.ezdemo_site.content.view_cache' => true,
+                    'ezsettings.ezdemo_site.content.ttl_cache' => true,
+                    'ezsettings.ezdemo_site.content.default_ttl' => 60,
+                    'ezsettings.ezdemo_site.fieldtypes.ezrichtext.embed.content' => array(
+                        'template' => 'MyBundle:FieldType/RichText/embed:content.html.twig',
+                    ),
+                    'ezsettings.ezdemo_site.fieldtypes.ezrichtext.embed.location_inline_denied' => array(
+                        'template' => 'MyBundle:FieldType/RichText/embed:location_inline_denied.html.twig',
+                    ),
+                )
+            ),
         );
     }
 }
