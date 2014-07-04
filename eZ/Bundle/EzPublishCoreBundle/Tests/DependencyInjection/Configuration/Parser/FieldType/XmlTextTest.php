@@ -60,7 +60,7 @@ class XmlTextTest extends AbstractExtensionTestCase
             array(
                 array(
                     'fieldtypes' => array(
-                        'ezxml' => array(
+                        'ezxmltext' => array(
                             'custom_tags' => array(
                                 array( 'path' => '/foo/bar.xsl', 'priority' => 123 ),
                                 array( 'path' => '/foo/custom.xsl', 'priority' => -10 ),
@@ -70,7 +70,7 @@ class XmlTextTest extends AbstractExtensionTestCase
                     )
                 ),
                 array(
-                    'ezsettings.ezdemo_site.fieldtypes.ezxml.custom_xsl' => array(
+                    'ezsettings.ezdemo_site.fieldtypes.ezxmltext.custom_xsl' => array(
                         // Default settings will be added
                         array( 'path' => '%kernel.root_dir%/../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/FieldType/XmlText/Input/Resources/stylesheets/eZXml2Html5_core.xsl', 'priority' => 0 ),
                         array( 'path' => '%kernel.root_dir%/../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/FieldType/XmlText/Input/Resources/stylesheets/eZXml2Html5_custom.xsl', 'priority' => 0 ),

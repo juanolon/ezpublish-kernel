@@ -13,7 +13,7 @@ use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Suggestion\C
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
-use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Parser\AbstractFieldTypeParser;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\FieldTypeParser;
 
 class Configuration implements ConfigurationInterface
 {
@@ -232,7 +232,7 @@ class Configuration implements ConfigurationInterface
         // Delegate to configuration parsers
         foreach ( $this->configParsers as $parser )
         {
-            if ( $parser instanceof AbstractFieldTypeParser )
+            if ( $parser instanceof FieldTypeParser )
             {
                 $parser->addSemanticConfig( $fieldTypeNodeBuilder );
             }
