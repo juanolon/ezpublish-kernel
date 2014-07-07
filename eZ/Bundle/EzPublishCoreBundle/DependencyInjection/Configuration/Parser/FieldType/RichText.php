@@ -247,12 +247,6 @@ class RichText extends AbstractFieldTypeParser
         foreach ( $config['system'] as $sa => &$settings )
         {
             // Workaround to be able to use registerInternalConfigArray() which only supports first level entries.
-            if ( isset( $settings['fieldtypes']['ezxml']['custom_tags'] ) )
-            {
-                $settings['fieldtypes.ezxml.custom_xsl'] = $settings['fieldtypes']['ezxml']['custom_tags'];
-                unset( $settings['fieldtypes']['ezxml']['custom_tags'] );
-            }
-
             if ( isset( $settings['fieldtypes']['ezrichtext']['output_custom_tags'] ) )
             {
                 $settings['fieldtypes.ezrichtext.output_custom_xsl'] = $settings['fieldtypes']['ezrichtext']['output_custom_tags'];
