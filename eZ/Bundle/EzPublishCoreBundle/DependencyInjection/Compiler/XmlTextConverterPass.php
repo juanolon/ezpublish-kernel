@@ -27,7 +27,7 @@ class XmlTextConverterPass implements CompilerPassInterface
         }
 
         $html5ConverterDef = $container->getDefinition( 'ezpublish.fieldType.ezxmltext.converter.html5' );
-        foreach ( $container->findTaggedServiceIds( 'ezpublish.ezxml.converter' ) as $id => $attributes )
+        foreach ( $container->findTaggedServiceIds( 'ezpublish.ezxmltext.converter' ) as $id => $attributes )
         {
             $html5ConverterDef->addMethodCall( 'addPreConverter', array( new Reference( $id ) ) );
         }

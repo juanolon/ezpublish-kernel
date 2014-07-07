@@ -113,7 +113,7 @@ services:
             - @ezpublish.api.repository
             - %ezpublish.fieldType.ezxmlText.converter.embedToHtml5.excludedAttributes%
         tags:
-            - { name: ezpublish.ezxml.converter }
+            - { name: ezpublish.ezxmltext.converter }
 
     ezpublish.fieldType.ezxmltext.converter.ezLinkToHtml5:
         class: %ezpublish.fieldType.ezxmltext.converter.ezLinkToHtml5.class%
@@ -123,12 +123,12 @@ services:
             - @ezpublish.urlalias_router
             - @?logger
         tags:
-            - { name: ezpublish.ezxml.converter }
+            - { name: ezpublish.ezxmltext.converter }
 
     ezpublish.fieldType.ezxmltext.converter.customTags:
         class: %ezpublish.fieldType.ezxmltext.converter.customTags.class%
         tags:
-            - { name: ezpublish.ezxml.converter }
+            - { name: ezpublish.ezxmltext.converter }
 
     # RichText
     ezpublish.fieldType.ezrichtext.converter.input.ezxml:

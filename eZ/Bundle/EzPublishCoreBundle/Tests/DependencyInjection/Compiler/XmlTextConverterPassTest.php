@@ -25,7 +25,7 @@ class XmlTextConverterPassTest extends AbstractCompilerPassTest
         $container->setDefinition( 'ezpublish.fieldType.ezxmltext.converter.html5', $html5ConvertDef );
 
         $preConverterDef = new Definition();
-        $preConverterDef->addTag( 'ezpublish.ezxml.converter' );
+        $preConverterDef->addTag( 'ezpublish.ezxmltext.converter' );
         $container->setDefinition( 'foo.converter', $preConverterDef );
 
         $this->assertFalse( $html5ConvertDef->hasMethodCall( 'addPreConverter' ) );
@@ -56,7 +56,7 @@ class XmlTextConverterPassTest extends AbstractCompilerPassTest
         $this->setDefinition( 'ezpublish.fieldType.ezxmltext.converter.html5', new Definition() );
         $serviceId = 'service_id';
         $def = new Definition();
-        $def->addTag( 'ezpublish.ezxml.converter' );
+        $def->addTag( 'ezpublish.ezxmltext.converter' );
         $this->setDefinition( $serviceId, $def );
 
         $this->compile();
