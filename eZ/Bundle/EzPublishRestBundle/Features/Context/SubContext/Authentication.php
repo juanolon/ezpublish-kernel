@@ -14,10 +14,6 @@ use Behat\Behat\Exception\PendingException;
 
 class Authentication extends Base implements AuthenticationSentences
 {
-    /**
-     * Given I am logged in as an|a "<role>"
-     * Given I have "<role>" permissions
-     */
     public function iAmLoggedInAsAn( $role )
     {
         switch( strtolower( $role ) )
@@ -34,19 +30,11 @@ class Authentication extends Base implements AuthenticationSentences
         $this->restClient->setAuthentication( $user, $password );
     }
 
-
-    /**
-     * Given I am logged in as "<user>" with password "<password>"
-     */
     public function iAmLoggedInAsWithPassword( $user, $password )
     {
         $this->restClient->setAuthentication( $user, $password );
     }
 
-    /**
-     * Given I am not logged in
-     * Given I do not|don't have permissions
-     */
     public function iAmNotLoggedIn()
     {
         $this->restClient->setAuthentication( '', '' );
